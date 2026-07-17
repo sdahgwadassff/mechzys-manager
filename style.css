@@ -1,1 +1,177 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
 
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0b1020;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* Animated Background */
+
+body::before{
+    content:"";
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:
+    radial-gradient(circle at top,#5865F2 0%,transparent 45%),
+    radial-gradient(circle at bottom,#7c3aed 0%,transparent 40%);
+    opacity:.4;
+    z-index:-2;
+}
+
+#particles{
+    position:fixed;
+    inset:0;
+    background-image:
+    radial-gradient(#ffffff55 1px, transparent 1px);
+    background-size:40px 40px;
+    animation:move 20s linear infinite;
+    opacity:.2;
+    z-index:-1;
+}
+
+@keyframes move{
+
+    from{
+        transform:translateY(0);
+    }
+
+    to{
+        transform:translateY(-40px);
+    }
+
+}
+
+/* NAV */
+
+nav{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:25px 8%;
+
+    position:fixed;
+    width:100%;
+
+    backdrop-filter:blur(12px);
+
+    background:rgba(15,23,42,.55);
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+nav h2{
+
+    color:#7289ff;
+
+}
+
+nav div{
+
+    display:flex;
+    gap:30px;
+
+}
+
+nav a{
+
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+
+}
+
+nav a:hover{
+
+    color:#7289ff;
+
+}
+
+/* HERO */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+    text-align:center;
+
+    padding:0 20px;
+
+}
+
+.hero h1{
+
+    font-size:4rem;
+
+    max-width:900px;
+
+    line-height:1.1;
+
+}
+
+.hero p{
+
+    margin-top:25px;
+
+    max-width:700px;
+
+    color:#b9c1d9;
+
+    font-size:1.2rem;
+
+    line-height:1.8;
+
+}
+
+.invite{
+
+    margin-top:45px;
+
+    display:inline-block;
+
+    padding:18px 42px;
+
+    background:#5865F2;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:14px;
+
+    font-weight:700;
+
+    transition:.35s;
+
+    box-shadow:0 0 25px rgba(88,101,242,.45);
+
+}
+
+.invite:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 0 50px rgba(88,101,242,.8);
+
+}
